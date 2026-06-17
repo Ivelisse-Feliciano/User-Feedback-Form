@@ -1,5 +1,5 @@
 // User Feedback Form
-// Code Challenge #1
+// Code Project #1
 // Ivelisse Feliciano
 
 const form = document.getElementById("feedback-form");
