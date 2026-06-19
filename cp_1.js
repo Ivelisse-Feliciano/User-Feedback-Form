@@ -6,6 +6,7 @@ const form = document.getElementById("feedback-form");
 const feedbackDisplay = document.getElementById("feedback-display");
 const charCount = document.getElementById("char-count");
 const tooltip = document.getElementById("tooltip");
+const successMessage = document.getElementById("success-message");
 
 // Event delegation for input fields
 form.addEventListener("input", function(event) {
@@ -47,6 +48,7 @@ form.addEventListener("submit", function(event) {
   event.stopPropagation();
 
   const name = document.getElementById("name");
+  const phone = document.getElementById("phone");
   const email = document.getElementById("email");
   const comments = document.getElementById("comments");
 
@@ -58,6 +60,11 @@ form.addEventListener("submit", function(event) {
     showError(name, "Name is required.");
     isValid = false;
   }
+
+  if (phone.value.trim() === "") {
+  showError(phone, "Phone number is required.");
+  isValid = false;
+}
 
   if (email.value.trim() === "") {
     showError(email, "Email is required.");
@@ -75,6 +82,8 @@ form.addEventListener("submit", function(event) {
 
     entry.innerHTML = `
       <h3>${name.value}</h3>
+      
+      <p><strong>Phone:</strong> ${phone.value}</p>
       <p><strong>Email:</strong> ${email.value}</p>
       <p><strong>Comments:</strong> ${comments.value}</p>
     `;

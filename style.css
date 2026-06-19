@@ -77,3 +77,11 @@ button:hover {
   border-left: 4px solid #222;
   margin-top: 10px;
 }
+
+.success-message {
+  display: none;
+  color: green;
+  font-weight: bold;
+  margin-top: 15px;
+  text-align: center;
+}
