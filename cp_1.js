@@ -89,6 +89,7 @@ form.addEventListener("submit", function(event) {
     `;
 
     feedbackDisplay.appendChild(entry);
+    successMessage.style.display = "block";
 
     form.reset();
     charCount.textContent = "Characters: 0";
