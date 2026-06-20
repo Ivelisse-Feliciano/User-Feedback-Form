@@ -26,11 +26,14 @@
 
       <div class="form-group">
   <label for="phone">Phone Number</label>
-  <input
-    type="tel"
-    id="phone"
-    data-tooltip="Enter your phone number"
-  />
+ <input
+  type="tel"
+  id="phone"
+  maxlength="10"
+  pattern="[0-9]{10}"
+  placeholder="1234567890"
+  data-tooltip="Enter a 10-digit phone number"
+/>
   <small class="error"></small>
 </div>
 
