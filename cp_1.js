@@ -8,6 +8,7 @@ const charCount = document.getElementById("char-count");
 const tooltip = document.getElementById("tooltip");
 const successMessage = document.getElementById("success-message");
 
+
 // Event delegation for input fields
 form.addEventListener("input", function(event) {
   event.stopPropagation();
@@ -63,6 +64,10 @@ form.addEventListener("submit", function(event) {
 
   if (phone.value.trim() === "") {
   showError(phone, "Phone number is required.");
+  isValid = false;
+}
+if (phone.value.length !== 10) {
+  showError(phone, "Phone number must be exactly 10 digits.");
   isValid = false;
 }
 
